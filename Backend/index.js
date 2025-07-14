@@ -78,7 +78,7 @@ app.post("/webhook", (req, res) => {
 // Send WhatsApp message using Meta Cloud API
 app.post("/send-message", async (req, res) => {
   const { to, message } = req.body;
-  const token = process.env.WHATSAPP_TOKEN;
+  const token = process.env.ACCESS_TOKEN;
   const phoneNumberId = process.env.PHONE_NUMBER_ID;
 
   if (!to || !message) {
